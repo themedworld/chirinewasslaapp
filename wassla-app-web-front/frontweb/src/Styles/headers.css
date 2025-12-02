@@ -1,0 +1,83 @@
+/* Dégradé de couleur moderne */
+.bg-gradient {
+  background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet de lueur sur le logo */
+.glow-effect {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.brand-highlight {
+  color: #ffeba7;
+  font-weight: 700;
+}
+
+/* Style de la barre de recherche */
+.search-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 0 20px 20px 0 !important;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Icônes et liens */
+.icon {
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 10px;
+  margin: 0 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  color: white !important;
+}
+
+/* Badges de notification */
+.badge {
+  font-size: 0.6rem;
+  padding: 0.35em 0.5em;
+}
+
+/* Adaptation mobile */
+@media (max-width: 992px) {
+  .search-container {
+    margin: 10px 0 !important;
+  }
+  
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,79 @@
+
+@layer base {
+  /* Reset et styles de base */
+  * {
+    @apply m-0 p-0 box-border;
+    scroll-behavior: smooth;
+  }
+
+  /* Masquer les flèches des inputs number */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Styles globaux pour les éléments HTML */
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* Typographie de base */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+
+  h1 { @apply text-4xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+
+  /* Liens */
+  a {
+    @apply text-sapphire-600 hover:text-sapphire-800 transition-colors duration-200;
+  }
+
+  /* Masquer la scrollbar tout en permettant le scroll */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Styles pour les éléments de formulaire */
+  input, textarea, select {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sapphire-500 focus:border-transparent transition-all;
+  }
+
+  /* Styles pour les boutons de base */
+  button {
+    @apply focus:outline-none focus:ring-2 focus:ring-sapphire-500 focus:ring-offset-2 transition-all;
+  }
+}
+
+@layer utilities {
+  /* Animation de fade-in */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Pour les éléments qui doivent prendre toute la hauteur disponible */
+  .min-h-screen-safe {
+    min-height: calc(100vh - env(safe-area-inset-bottom));
+  }
+}
+
+/* Styles personnalisés en dehors des layers */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
